@@ -72,6 +72,20 @@ input, select, textarea {
 	appearance: none;
 }
 
+.curved-box {
+
+  background-color: rgba(0, 0, 0, 0.35);
+  padding: 10px;
+  border-radius: 20px;
+  width: fit-content;
+
+}
+
+.grid-container {
+    display: grid;
+    place-items: center;
+}
+
 /* Basic */
 
 	html {
@@ -212,10 +226,10 @@ input, select, textarea {
 /* BG */
 
 	#bg {
-		-moz-animation: bg 60s linear infinite;
-		-webkit-animation: bg 60s linear infinite;
-		-ms-animation: bg 60s linear infinite;
-		animation: bg 60s linear infinite;
+		-moz-animation: bg 120s linear infinite;
+		-webkit-animation: bg 120s linear infinite;
+		-ms-animation: bg 120s linear infinite;
+		animation: bg 120s linear infinite;
 		-moz-backface-visibility: hidden;
 		-webkit-backface-visibility: hidden;
 		-ms-backface-visibility: hidden;
@@ -226,7 +240,7 @@ input, select, textarea {
 		transform: translate3d(0,0,0);
 	/* Set your background with this */
 
-		background: #348cb2 url("images/image.png") bottom left;
+		background: #348cb2 url("images/image-clark-city-center.png") bottom left;
 		background-repeat: repeat-x;
 		height: 100%;
 		left: 0;
