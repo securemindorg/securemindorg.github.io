@@ -73,8 +73,6 @@ input, select, textarea {
 }
 
 .curved-box {
-
-.curved-box {
   background-color: rgba(0, 0, 0, 0.35);
   padding: 10px;
   border-radius: 10px; /* Adjust this value to control the curve */
@@ -88,6 +86,10 @@ input, select, textarea {
   display: flex;
   justify-content: center; /* Center the box horizontally within the container */
   align-items: center; /* Center the box vertically within the container */
+}
+
+.curved-box h1, .curved-box p {
+    white-space: pre-wrap;
 }
 
 /* Basic */
