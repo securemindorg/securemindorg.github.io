@@ -74,16 +74,20 @@ input, select, textarea {
 
 .curved-box {
 
+.curved-box {
   background-color: rgba(0, 0, 0, 0.35);
   padding: 10px;
-  border-radius: 20px;
-  width: fit-content;
-
+  border-radius: 10px; /* Adjust this value to control the curve */
+  width: 90%; /* Box takes 90% of the screen width */
+  margin: 0 auto; /* Center the box horizontally */
+  text-align: center; /* Center the text inside the box */
 }
 
-.grid-container {
-    display: grid;
-    place-items: center;
+.container { /* Assuming this is the parent container */
+  height: 100vh; /* Set the height to 100% of the viewport height */
+  display: flex;
+  justify-content: center; /* Center the box horizontally within the container */
+  align-items: center; /* Center the box vertically within the container */
 }
 
 /* Basic */
