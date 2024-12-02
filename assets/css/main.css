@@ -247,12 +247,12 @@ input, select, textarea {
 	/* Set your background with this */
 
 		background: #999999 url("images/image.jpg") bottom left;
-		background-repeat: cover;
-		height: 100%;
-		left: 0;
-		opacity: 1;
-		position: fixed;
-		top: 0;
+		    background-size: 100% 100%;
+		    height: 100%;
+		    width: 100%;
+		    position: fixed;
+		    top: 0;
+		    left: 0;
 	}
 
 	@-moz-keyframes bg {
