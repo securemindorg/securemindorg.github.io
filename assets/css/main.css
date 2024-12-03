@@ -30,7 +30,6 @@ footer, header, hgroup, menu, nav, section {
 	display: block;}
 
 body {
-	line-height: 1;
 }
 
 ol, ul {
@@ -95,7 +94,9 @@ input, select, textarea {
 /* Basic */
 
 	html {
-		box-sizing: border-box;
+		height: 100%;
+    margin: 0;
+    padding: 0;
 	}
 
 	*, *:before, *:after {
@@ -105,6 +106,9 @@ input, select, textarea {
 	body {
 		background: #fff;
 		overflow: hidden;
+		height: 100%;
+    margin: 0;
+    padding: 0;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -232,29 +236,14 @@ input, select, textarea {
 /* BG */
 
 	#bg {
-		/*-moz-animation: bg 360s linear infinite;
-		-webkit-animation: bg 360s linear infinite;
-		-ms-animation: bg 360s linear infinite;
-		animation: bg 360s linear infinite;*/
-		-moz-backface-visibility: hidden;
-		-webkit-backface-visibility: hidden;
-		-ms-backface-visibility: hidden;
-		backface-visibility: hidden;
-		-moz-transform: translate3d(0,0,0);
-		-webkit-transform: translate3d(0,0,0);
-		-ms-transform: translate3d(0,0,0);
-		transform: translate3d(0,0,0);
-	/* Set your background with this */
-
-		background: #999999 url("images/image.jpg") bottom left;
-		    background-size: 100% 100%;
-		    height: 100%;
-		    width: 100%;
-		    position: fixed;
-		    top: 0;
-		    left: 0;
-	}
-
+    background: #999999 url("images/backgroundsite.png") no-repeat center center fixed;
+    background-size: cover; /* Ensures the image scales to cover the screen */
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    position: fixed; /* Sticks the background in place */
+    top: 0;
+    left: 0;
+}
 	@-moz-keyframes bg {
 		0% {
 			-moz-transform: translate3d(0,0,0);
@@ -320,8 +309,9 @@ input, select, textarea {
 	}
 
 	#bg {
-		background-size: 2250px auto;
-		width: 1090px;
+		        background-size: cover;
+        height: 100vh;
+        width: 100vw;
 	}
 
 /* Overlay */
@@ -824,8 +814,9 @@ input, select, textarea {
 		}
 
 		#bg {
-			background-size: 1500px auto;
-			width: 4500px;
+			        background-size: cover;
+        height: 100vh;
+        width: 100vw;
 		} }
 
 /* Normal */
@@ -906,8 +897,9 @@ input, select, textarea {
 		}
 
 		#bg {
-			background-size: 750px auto;
-			width: 2250px;
+			        background-size: cover;
+        height: 100vh;
+        width: 100vw;
 		} }
 
 /* Mobile */
@@ -992,8 +984,9 @@ input, select, textarea {
 		}
 
 		#bg {
-			background-size: 300px auto;
-			width: 900px;
+			        background-size: cover;
+        height: 100vh;
+        width: 100vw;
 		}
 
 	/* Header */
@@ -1090,8 +1083,9 @@ input, select, textarea {
 		}
 
 		#bg {
-			background-size: 412.5px auto;
-			width: 1237.5px;
+			        background-size: cover;
+        height: 100vh;
+        width: 100vw;
 		}
 
 	/* Header */
