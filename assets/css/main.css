@@ -1093,3 +1093,28 @@ input, select, textarea {
 		#header nav {
 			padding: 0 1em;
 		} }
+
+		/* Target elements with title attribute */
+		[title] {
+		  position: relative;
+		}
+		
+		/* Style the tooltip */
+		[title]:after {
+		  content: attr(title);
+		  display: none;
+		  padding: 5px 10px;
+		  border-radius: 3px;
+		  background-color: #333;
+		  color: #fff;
+		  position: absolute;
+		  bottom: 120%; /* Position below the link */
+		  left: 50%;
+		  transform: translateX(-50%); /* Center horizontally */
+		  z-index: 10; /* Ensure tooltip appears above other elements */
+		}
+		
+		/* Show tooltip on hover */
+		[title]:hover:after {
+		  display: block;
+		}
