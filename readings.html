@@ -58,11 +58,16 @@
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
         }
 
         li:hover {
             transform: translateY(-5px);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        li.visited {
+            background: #d4edda;
         }
 
         h3 {
@@ -85,6 +90,19 @@
 
         a:hover {
             text-decoration: underline;
+        }
+
+        .checkmark {
+            display: none;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 1.5em;
+            color: #28a745;
+        }
+
+        li.visited .checkmark {
+            display: block;
         }
 
         .centered-link {
@@ -116,6 +134,24 @@
         }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const links = document.querySelectorAll('a[target="_blank"]');
+
+            links.forEach(link => {
+                const listItem = link.closest('li');
+
+                if (localStorage.getItem(link.href)) {
+                    listItem.classList.add('visited');
+                }
+
+                link.addEventListener('click', () => {
+                    listItem.classList.add('visited');
+                    localStorage.setItem(link.href, 'visited');
+                });
+            });
+        });
+    </script>
 </head>
 <body>
 
@@ -131,11 +167,13 @@
                 <h3>Ian Goodfellow et al. (2014). “Generative Adversarial Nets.” Advances in Neural Information Processing Systems (NeurIPS).</h3>
                 <p>The seminal paper that introduced GANs, laying the foundation for a myriad of generative models and approaches to producing synthetic data.</p>
                 <a href="https://arxiv.org/pdf/1406.2661" target="_blank">Read Paper</a>
+                <span class="checkmark">✔</span>
             </li>
             <li>
                 <h3>Diederik P. Kingma & Max Welling (2013). “Auto-Encoding Variational Bayes.”</h3>
                 <p>Introduced the concept of VAEs, a cornerstone generative framework that combines probabilistic modeling with neural networks, widely used for dimensionality reduction, anomaly detection, and synthetic data generation.</p>
                 <a href="https://arxiv.org/pdf/1312.6114" target="_blank">Read Paper</a>
+                <span class="checkmark">✔</span>
             </li>
         </ul>
     </div>
@@ -148,7 +186,7 @@
     </div>
 
     <div class="category">
-        <h2>Category 3: Data Science</h2>
+        <h2>Category 3: Deep Learning</h2>
         <ul>
             <!-- Add deep learning resources here -->
         </ul>
