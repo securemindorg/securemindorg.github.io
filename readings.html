@@ -1,60 +1,166 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reading List</title>
     <style>
         body {
-            font-family: sans-serif;
-            margin: 20px;
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6;
+            color: #333;
+        }
+
+        header {
+            background-color: #4a90e2;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         h2 {
-            margin-top: 30px;
+            margin-top: 40px;
+            color: #4a90e2;
+            font-size: 1.8em;
+            border-bottom: 2px solid #4a90e2;
+            padding-bottom: 5px;
         }
 
         ul {
             list-style: none;
             padding: 0;
+            margin: 20px 0;
         }
 
         li {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .category {
-            margin-bottom: 20px;
+        li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h3 {
+            margin: 0 0 10px;
+            font-size: 1.4em;
+            color: #333;
+        }
+
+        p {
+            margin: 0 0 15px;
+            font-size: 1em;
+            color: #555;
+        }
+
+        a {
+            text-decoration: none;
+            color: #4a90e2;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .centered-link {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .centered-link a {
+            font-size: 0.9em;
+            color: #777;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px 0;
+            background: #f4f4f4;
+            border-top: 1px solid #ddd;
+            color: #666;
+        }
+
+        footer a {
+            color: #4a90e2;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <h1>My Reading List</h1>
+<header>
+    <h1>My Suggested Reading List</h1>
+</header>
 
+<div class="container">
     <div class="category">
         <h2>Category 1: Data Science</h2>
         <ul>
             <li>
                 <h3>Ian Goodfellow et al. (2014). “Generative Adversarial Nets.” Advances in Neural Information Processing Systems (NeurIPS).</h3>
-                <p>The seminal paper that introduced GANs, laying the foundation for a myriad of generative models and approaches to producing synthetic data..</p>
+                <p>The seminal paper that introduced GANs, laying the foundation for a myriad of generative models and approaches to producing synthetic data.</p>
                 <a href="https://arxiv.org/pdf/1406.2661" target="_blank">Read Paper</a>
             </li>
             <li>
                 <h3>Diederik P. Kingma & Max Welling (2013). “Auto-Encoding Variational Bayes.”</h3>
-                <p>Introduced the concept of VAEs, a cornerstone generative framework that combines probabilistic modeling with neural networks, widely used for dimension reduction, anomaly detection, and synthetic data generation.</p>
+                <p>Introduced the concept of VAEs, a cornerstone generative framework that combines probabilistic modeling with neural networks, widely used for dimensionality reduction, anomaly detection, and synthetic data generation.</p>
                 <a href="https://arxiv.org/pdf/1312.6114" target="_blank">Read Paper</a>
-            </li>
             </li>
         </ul>
     </div>
 
     <div class="category">
         <h2>Category 2: Machine Learning</h2>
+        <ul>
+            <!-- Add machine learning resources here -->
+        </ul>
     </div>
 
     <div class="category">
         <h2>Category 3: Deep Learning</h2>
-
+        <ul>
+            <!-- Add deep learning resources here -->
+        </ul>
     </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 My Reading List. Created with ❤️ for learning and exploration.</p>
+    <a href="http://www.freevisitorcounters.com">Visitor Counter</a>
+    <script type="text/javascript" src="https://www.freevisitorcounters.com/auth.php?id=0b5ce5f29f53c220ac3e8c117abe6abc405ecc3f"></script>
+    <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1277103/t/3"></script>
+</footer>
 
 </body>
 </html>
