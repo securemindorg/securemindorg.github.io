@@ -15,6 +15,7 @@
 	<body class="is-preload">
 		<div id="wrapper">
 			<div id="bg"></div>
+			<div id="overlay"></div>
 			<div id="main">
 
 				<!-- Header -->
@@ -23,14 +24,17 @@
 						<p>Assistant Professor &nbsp;&bull;&nbsp; Engineer</p>
 						<nav>
 							<ul>
-								<li><a href="https://orcid.org/0000-0001-7433-9961" class="fa-brands fa-orcid"><span class="label">ORCID</span></a></li>
-								<li><a href="https://www.researchgate.net/profile/Joshua-White-26" class="fa-brands fa-researchgate"><span class="label">ResearchGate</span></a></li>
-								<li><a href="https://scholar.google.com/citations?user=AI9XBA4AAAAJ&hl=en" class="fa-solid fa-book"><span class="label">Scholar</span></a></li>
-								<li><a href="https://www.linkedin.com/in/joshuaswhitephd" class="fa-brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-								<li><a href="https://github.com/securemindorg" class="fa-brands fa-github"><span class="label">Github</span></a></li>
-								<li><a href="https://www.utica.edu/people/joshua-white-0" class="fas fa-chalkboard-teacher"><span class="label">Github</span></a></li>
+						<li><a href="https://orcid.org/0000-0001-7433-9961" class="fa-brands fa-orcid" title="ORCID profile"><span class="label">ORCID</span></a></li>
+						<li><a href="https://www.researchgate.net/profile/Joshua-White-26" class="fa-brands fa-researchgate" title="ResearchGate profile"><span class="label">ResearchGate</span></a></li>
+						<li><a href="https://scholar.google.com/citations?user=AI9XBA4AAAAJ&hl=en" class="fa-solid fa-book" title="Google Scholar profile"><span class="label">Scholar</span></a></li>
+						<li><a href="https://www.linkedin.com/in/joshuaswhitephd" class="fa-brands fa-linkedin" title="LinkedIn profile"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://github.com/securemindorg" class="fa-brands fa-github" title="Github profile"><span class="label">Github</span></a></li>
+						<li><a href="https://www.utica.edu/people/joshua-white-0" class="fas fa-chalkboard-teacher" title="Utica University Directory"></span></a></li>
 							</ul>
 						</nav>
+						<div class="centered-link">
+							<a href="https://securemind.org/readings.html">My Suggested Reading Lists</a>
+						</div>
 					</div></header>
 
 				<!-- Footer -->
@@ -38,12 +42,24 @@
 						<small><a href="http://html5up.net">HTML5 UP</a></small>
 					</footer>
 
-
+			</div>
 		</div>
 		<script>
 			window.onload = function() { document.body.classList.remove('is-preload'); }
 			window.ontouchmove = function() { return false; }
 			window.onorientationchange = function() { document.body.scrollTop = 0; }
+
+			document.addEventListener("DOMContentLoaded", function() {
+			const links = document.querySelectorAll("[title]");
+			links.forEach(link => {
+				link.addEventListener("mouseover", function() {
+				this.style.textDecoration = "underline"; // Optional: underline link on hover
+				});
+				link.addEventListener("mouseout", function() {
+				this.style.textDecoration = "none"; // Optional: remove underline on mouseout
+				});
+			});
+			});
 		</script>
 	</body>
 </html>
