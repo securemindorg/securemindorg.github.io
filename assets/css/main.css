@@ -236,7 +236,7 @@ input, select, textarea {
 /* BG */
 
 	#bg {
-    background: #999999 url("images/backgroundsite.png") no-repeat center center fixed;
+    background: #999999 url("images/backgroundnew.jpg") no-repeat center center fixed;
     background-size: cover; /* Ensures the image scales to cover the screen */
     height: 100vh; /* Full viewport height */
     width: 100vw; /* Full viewport width */
