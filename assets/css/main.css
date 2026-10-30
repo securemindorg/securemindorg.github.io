@@ -72,7 +72,7 @@ input, select, textarea {
 }
 
 .curved-box {
-  background-color: rgba(0, 0, 0, 0.35);
+  background-color: rgba(0, 0, 0, 0.8);
   padding: 10px;
   border-radius: 10px; /* Adjust this value to control the curve */
   width: 90%; /* Box takes 90% of the screen width */
