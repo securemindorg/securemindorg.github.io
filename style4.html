@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joshua S. White, PhD | SecureMind Analytics</title>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --card-bg: rgba(11, 15, 25, 0.80); /* Slightly more opaque so cards pop against the photo */
+            --border-color: rgba(255, 255, 255, 0.12);
+            --accent-orange: #E65300;
+            --accent-cyan: #00f0ff;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            /* Faded background image using a gradient overlay */
+            background-image: linear-gradient(rgba(7, 9, 14, 0.82), rgba(7, 9, 14, 0.82)), url('./css/images/ie/backgroundsite.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            
+            background-color: #07090e; /* Fallback color */
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            min-height: 100vh;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+            color: #ffffff;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            margin-bottom: 20px;
+        }
+
+        .social-nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .social-nav a {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+
+        .social-nav a:hover {
+            color: var(--accent-cyan);
+            border-color: var(--accent-cyan);
+            transform: translateY(-2px);
+        }
+
+        .grid-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .grid-columns { grid-template-columns: 1fr; }
+        }
+
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 28px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            text-align: left;
+        }
+
+        .card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 18px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--accent-orange);
+            color: #fff;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .card a {
+            display: block;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.88rem;
+            line-height: 1.5;
+            margin-bottom: 12px;
+            transition: color 0.2s ease;
+        }
+
+        .card a:hover {
+            color: var(--accent-cyan);
+            text-decoration: underline;
+        }
+
+        .footer-links {
+            text-align: center;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 20px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+
+        .footer-links a {
+            color: var(--text-main);
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-orange);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Joshua S. White, PhD</h1>
+            <p>Assistant Professor &nbsp;&bull;&nbsp; SecureMind Analytics</p>
+            <nav class="social-nav">
+                <ul>
+                    <li><a href="https://orcid.org/0000-0001-7433-9961" title="ORCID"><i class="fa-brands fa-orcid"></i></a></li>
+                    <li><a href="https://www.researchgate.net/profile/Joshua-White-26" title="ResearchGate"><i class="fa-brands fa-researchgate"></i></a></li>
+                    <li><a href="https://scholar.google.com/citations?user=AI9XBA4AAAAJ&hl=en" title="Google Scholar"><i class="fa-solid fa-book"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/joshuaswhitephd" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="https://github.com/securemindorg" title="GitHub"><i class="fa-brands fa-github"></i></a></li>
+                    <li><a href="https://www.utica.edu/people/joshua-white-0" title="Utica University"><i class="fas fa-chalkboard-teacher"></i></a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="grid-columns">
+            <!-- Left Card: Tools -->
+            <div class="card">
+                <h3>Analytics Tools</h3>
+                <a href="http://securemind.org/Utica-Document-Analysis/">Stylometrics & Advanced Text Analytic Document Analysis</a> 
+                <a href="http://securemind.org/Utica-Document-Analysis/better-writer-stylometrics.html">Better Writer - Formative Stylometric Suite & Diagnostic Analyzer</a> 
+                <a href="http://securemind.org/utica-scheduling-generator/">Department Course Scheduling Generator</a> 
+                <a href="http://securemind.org/utica-doorcard-generator/">Faculty Office Door Card Generator</a>  
+                <a href="http://securemind.org/utica-signature-generator/">University Email Signature Generator</a>
+                <a href="http://securemind.org/utica-student-resume-ats/">Student Resume ATS Scan Optimizer</a> 
+                <a href="http://securemind.org/research-utilities/researchscaffold-structure-generator.html">ResearchScaffold Directory Structure Generator</a>
+            </div>
+
+            <!-- Right Card: Course Utilities -->
+            <div class="card">
+                <h3>Course Utilities</h3>
+                <a href="http://securemind.org/uu-course-jeopardy-games/ecn-241-review-utility.html">ECN 241 - Course Review Utility</a>
+                <a href="http://securemind.org/uu-course-jeopardy-games/ecn-241-week-10-practice-test.html">ECN 241 - Week 10 Practice Test</a>
+                <a href="http://securemind.org/ECN-241-StudyMaterial/ContinuousProbabilityTrainer.html">ECN 241 Statistics - Continuous Probability Study Tool</a>
+                <a href="http://securemind.org/uu-course-jeopardy-games/ecn-241-spooky-halloween-jeopardy.html">ECN 241 Statistics - Halloween Probability Jeopardy Game</a>
+                <a href="https://securemind.org/uu-course-jeopardy-games/ecn-241-midsemester-jeopardy.html">ECN 241 Statistics - MidSemester Jeopardy Game</a>
+                <a href="https://securemind.org/ECN-241-Probability/">ECN 241 Statistics - Spin It To Win It Probability Game</a>
+                <a href="http://securemind.org/ecn-347-horserace/">ECN 347 Sports Economics - Horse Race Betting Statistics</a>  
+                <a href="https://securemind.org/uu-course-jeopardy-games/mgt-325-midsemester-jeopardy.html">MGT 325 - MidSemester Jeopardy Game</a>
+                <a href="http://securemind.org/uu-course-jeopardy-games/mgt-325-spooky-halloween-jeopardy.html">MGT 325 Management of Tech - Halloween Jeopardy Game</a>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <a href="./readings.html"><i class="fa-solid fa-book-open"></i> Suggested Reading Lists</a>
+            <a href="https://www.mdpi.com/2624-800X/6/4/118" target="_blank"><i class="fa-solid fa-file-shield"></i> Latest Publication (MDPI ORF)</a>
+        </div>
+    </div>
+</body>
+</html>
